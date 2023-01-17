@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Baloo+Bhaijaan+2&family=Bree+Serif&family=Fredoka+One&family=Heebo&family=Lobster&family=Piazzolla:opsz,wght@8..30,200;8..30,300;8..30,400&family=Righteous&family=Roboto+Mono:wght@100&family=Ubuntu:ital,wght@0,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: 'Piazzolla', serif;
+}
+
+:root{
+    --main-bg : #1e271e;
+    --main-color : #0097e6;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main_menu {
+    background-color: var(--main-bg);
+}
+
+.main_header {
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+
+.main_header li {
+    margin-left: 2rem;
+}
+
+.main_header a {
+    color: #fff;
+    font-size: 1.8rem;
+}
+.main_header a:hover {
+    color: var(--main-color);
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.navbar-toggler{
+    background-color: #fff !important;
+}
+
+.main_header_left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50rem;
+}
+
+.main_header_left span{
+    color: var(--main-color);
+}
+
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+    outline: none;
+}
+.main_header_left button:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+.main_header_left h1{
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+.main_header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+}
+
+.main_header_right img {
+    height: 400px;
+}
+
+.error_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.error_page img{
+    height: 30rem;
+}
+
+.error_page p{
+    font-size: 1.8rem;
+    margin-top: 3rem;
+}
+.error_page h1{
+    font-size: 3rem;
+}
+
+
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.5rem;
+}
+
+.main_header_right .about_img{
+    filter: drop-shadow(0 0.5 1rem rgba(0, 0, 0, 0.3));
+}
+
+.main_content .temp_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+.main_content .temp_form{
+    background-color: #000;
+    border-radius: 5rem;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: wrap;
+}
+.main_content .temp_form #cityName{
+    padding: 1rem 5rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    font-size: 1.8rem;
+    color: var(--main-color);
+    background-color: #000;
+    outline: none;
+    border: none;
+}
+.main_content .temp_form #submitBtn{
+    padding: .6rem 2rem;
+    border-top-right-radius: 2rem;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+    background-color: var(--main-color);
+    color: #fff;
+    outline: none;
+    border: none;
+}
+.main_content .temp_form #submit:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+.tem_info{
+    background-color: #000;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    font-size: 1.8rem;
+    margin-top: 5rem;
+}
+.tem_info .top_layer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    border-bottom: 1px solid var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    font-size: 4rem;
+}
+.main_layer .middle_layer #temp_status{
+    color: var(--main-color);
+}
+
+/* responsive code */
+@media(max-width: 768px){
+    .main_header_left{
+        height: auto;
+        margin-top: 3rem;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
+}
+
+@media(max-width: 460px){
+    *{
+        margin: 0;
+    }
+    .main_content .temp_form #cityName{
+        margin-left: 0px;
+        padding: 0;
+    }
+    .main_content .temp_form #submitBtn{
+        margin-left: -50px;
+    }
+}
